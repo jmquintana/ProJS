@@ -1,4 +1,3 @@
-let btnIniciarSesion = document.getElementById("btnIniciarSesion")
 btnIniciarSesion.onclick = () => {
     if(window.innerWidth>850){
         formularioRegistro.style.display = "none";
@@ -15,8 +14,6 @@ btnIniciarSesion.onclick = () => {
         cajaLogin.style.display = "none";
     }    
 }
-
-let btnRegistrarse = document.getElementById("btnRegistrarse")
 btnRegistrarse.onclick = () =>{
     if(window.innerWidth>850){
         formularioRegistro.style.display = "block";
