@@ -117,6 +117,10 @@ main{
   cursor: pointer;
   outline: none;
 }
+.contenedorLoginRegistro form button:hover{
+  background: linear-gradient(to left,#d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%);
+  font-size: 0.9rem;
+}
 .formularioLogin{
   opacity: 1;
   display: block;
