@@ -50,3 +50,12 @@ function ajusteWidth() {
 }
 
 ajusteWidth();
+
+function Verificar(){
+    let arrayAuxiliar = JSON.parse(localStorage.getItem("ListadoSubscriptores"));
+    if (arrayAuxiliar){
+        for (elemento of arrayAuxiliar){
+            ArrayDeSubscriptores.push(new Subscirptor(elemento));
+        }
+    }
+}
