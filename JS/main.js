@@ -1,3 +1,15 @@
+//evento onload
+window.onload = function() {
+    //array
+        let carrera = ["Administrador", "Usuario Cliente"];
+    //for each
+        carrera.forEach(element => {
+           let opcion = document.createElement("option");
+            document.querySelector("#mySelect").appendChild(opcion);
+            opcion.innerHTML = element;
+        });
+    };
+
 btnIniciarSesion.onclick = () => {
     if(window.innerWidth>850){
         formularioRegistro.style.display = "none";
