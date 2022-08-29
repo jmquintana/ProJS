@@ -59,3 +59,16 @@ function Verificar(){
         }
     }
 }
+
+function validarCredenciales(email, clave){ 
+    let ListadoSubscriptores = Verificar();
+    let bAcceso = false;
+
+    for (var i=0; i < ListadoSubscriptores.length; i++ ){
+        if(email == ListadoSubscriptores[i][1] && clave == ListadoSubscriptores[i][2]){
+            bAcceso = true;
+            sessionStorage.setItem('usuarioActivo', ListadoSubscriptores[i][0]);
+            sessionStorage.setItem('rollUsuarioActivo', ListadoSubscriptores[i][3]);
+        }
+    }
+}
