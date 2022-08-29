@@ -15,7 +15,7 @@ botonGuardar.onclick = () =>{
     let nombreIngresado = document.getElementById('txtNombreCompleto').value;
     let emailUsuario = document.getElementById('txtEmailUsuario').value;
     let claveIngresada = document.getElementById('txtClaveUsuario').value; 
-    let rollUsuario = document.getElementById('').value;
+    let rollUsuario = document.getElementById('mySelect').value;
 
     let objUsuario = {nombre: nombreIngresado, email: emailUsuario, clave: claveIngresada, roll: rollUsuario}
 
