@@ -1,9 +1,9 @@
 //evento onload
 window.onload = function() {
     //array
-        let carrera = ["Administrador", "Usuario Cliente"];
+        let rol = ["Administrador", "Usuario Cliente"];
     //for each
-        carrera.forEach(element => {
+        rol.forEach(element => {
            let opcion = document.createElement("option");
             document.querySelector("#mySelect").appendChild(opcion);
             opcion.innerHTML = element;
@@ -72,15 +72,22 @@ function Verificar(){
     }
 }
 
-function validarCredenciales(email, clave){ 
-    let ListadoSubscriptores = Verificar();
+function obtenerUsuarios(){
+    let listaUsuarios = JSON.parse (localStorage.getItem("ListadoSubscriptores"));  
+    return listaUsuarios;
+}
+
+function validarCredenciales(pEmail, pClave){ 
+    let ListadoSubscriptores = obtenerUsuarios();
     let bAcceso = false;
 
     for (var i=0; i < ListadoSubscriptores.length; i++ ){
-        if(email == ListadoSubscriptores[i][1] && clave == ListadoSubscriptores[i][2]){
+        if(pEmail == ListadoSubscriptores[i][1] && pClave == ListadoSubscriptores[i][2]){
             bAcceso = true;
+            alert("Hola Mundo");
             sessionStorage.setItem('usuarioActivo', ListadoSubscriptores[i][0]);
             sessionStorage.setItem('rollUsuarioActivo', ListadoSubscriptores[i][3]);
         }
     }
+    return bAcceso;
 }

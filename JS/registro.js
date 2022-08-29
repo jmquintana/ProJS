@@ -14,10 +14,10 @@ Verificar()
 botonGuardar.onclick = () =>{
     let nombreIngresado = document.getElementById('txtNombreCompleto').value;
     let emailUsuario = document.getElementById('txtEmailUsuario').value;
-    let claveIngresada = document.getElementById('txtClaveUsuario').value; 
+    let claveUsuario = document.getElementById('txtClaveUsuario').value; 
     let rollUsuario = document.getElementById('mySelect').value;
 
-    let objUsuario = {nombre: nombreIngresado, email: emailUsuario, clave: claveIngresada, roll: rollUsuario}
+    let objUsuario = {nombre: nombreIngresado, email: emailUsuario, clave: claveUsuario, roll: rollUsuario}
 
     ArrayDeSubscriptores.push(new Subscirptor(objUsuario));
 
