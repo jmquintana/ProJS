@@ -1,5 +1,5 @@
-botonIngresar.onclick = () =>{
-    
+botonIngresar.onclick = (e) =>{
+    e.preventDefault();
     let sEmailIngresado = '';
     let sClaveIngresada = '';
     let bAcceso = false;
