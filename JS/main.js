@@ -82,11 +82,10 @@ function validarCredenciales(pEmail, pClave){
     let bAcceso = false;
 
     for (var i=0; i < ListadoSubscriptores.length; i++ ){
-        if(pEmail == ListadoSubscriptores[i][1] && pClave == ListadoSubscriptores[i][2]){
+        if(pEmail == ListadoSubscriptores[i].email && pClave == ListadoSubscriptores[i].clave){
             bAcceso = true;
-            alert("Hola Mundo");
-            sessionStorage.setItem('usuarioActivo', ListadoSubscriptores[i][0]);
-            sessionStorage.setItem('rollUsuarioActivo', ListadoSubscriptores[i][3]);
+            sessionStorage.setItem('usuarioActivo', ListadoSubscriptores[i].nombre);
+            sessionStorage.setItem('rolUsuarioActivo', ListadoSubscriptores[i].rol);
         }
     }
     return bAcceso;

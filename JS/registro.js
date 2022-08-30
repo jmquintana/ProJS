@@ -3,7 +3,7 @@ class Subscirptor{
         this.nombre = obj.nombre;
         this.email = obj.email;
         this.clave = obj.clave;
-        this.roll = obj.roll;
+        this.rol = obj.rol;
     }
 }
 
@@ -15,9 +15,9 @@ botonGuardar.onclick = () =>{
     let nombreIngresado = document.getElementById('txtNombreCompleto').value;
     let emailUsuario = document.getElementById('txtEmailUsuario').value;
     let claveUsuario = document.getElementById('txtClaveUsuario').value; 
-    let rollUsuario = document.getElementById('mySelect').value;
+    let rolUsuario = document.getElementById('mySelect').value;
 
-    let objUsuario = {nombre: nombreIngresado, email: emailUsuario, clave: claveUsuario, roll: rollUsuario}
+    let objUsuario = {nombre: nombreIngresado, email: emailUsuario, clave: claveUsuario, rol: rolUsuario}
 
     ArrayDeSubscriptores.push(new Subscirptor(objUsuario));
 

@@ -1,5 +1,7 @@
 /*reset*/
-*{
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +10,8 @@
     font-family: 'Shadows Into Light', cursive;
   }
 body{
+  min-height: 100vh;
+  display: flex;
   background-image: url(../Imagenes/Login.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -111,7 +115,7 @@ main{
   padding: 0.625rem 2.5rem;
   margin-top: 1.8rem;
   border: 2px double white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background:#7d83ff;
   color: white;
   border-bottom-right-radius: 1rem;
