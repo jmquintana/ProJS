@@ -15,8 +15,8 @@ botonIngresar.onclick = () =>{
 }
 
 function ingresar(){
-    let roll = sessionStorage.getItem('rollUsuarioActivo');
-    switch(roll){
+    let rol = sessionStorage.getItem('rolUsuarioActivo');
+    switch(rol){
         case 'Administrador':
             window.location.href = './pages/userAdim.html';
         break;
