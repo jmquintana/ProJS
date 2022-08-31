@@ -90,3 +90,11 @@ function validarCredenciales(pEmail, pClave){
     }
     return bAcceso;
 }
+
+// function timeOutAdmin(){
+//     setTimeout(function(){window.location.href = './pages/userAdim.html'; },1000);
+//   }
+
+//   function timeOutCliente(){
+//     setTimeout(function(){window.location.href = './pages/userCliente.html'; },1000);
+//   }
