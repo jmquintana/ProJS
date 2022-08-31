@@ -12,6 +12,17 @@ botonIngresar.onclick = (e) =>{
     if( bAcceso == true){
         ingresar ();
     }
+    else{
+      Swal.fire({
+        icon: 'error',
+        iconColor:'red',
+        title: 'Ups...',
+        text: 'Usuario y/o contraseña incorrecto.',
+        confirmButtonText:'Intentalo nuevamente',
+        confirmButtonColor:'#007fff',
+        customClass: "Custom_Cancel"
+      })
+  }
 }
 
 function ingresar(){
@@ -24,7 +35,6 @@ function ingresar(){
                 showConfirmButton: false,
                 color: '#007fff',
                 iconColor:'#1affd5',
-                backgroundColor:'007fff',
                 timer: 1000,
                 timerProgressBar: true,
                 didOpen: (toast) => {
@@ -46,7 +56,6 @@ function ingresar(){
                 showConfirmButton: false,
                 color: '#007fff',
                 iconColor:'#1affd5',
-                backgroundColor:'007fff',
                 timer: 2000,
                 timerProgressBar: true,
                 didOpen: (toast1) => {
