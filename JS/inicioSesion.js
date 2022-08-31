@@ -30,16 +30,14 @@ function ingresar(){
                 didOpen: (toast) => {
                   toast.addEventListener('mouseenter', Swal.stopTimer)
                   toast.addEventListener('mouseleave', Swal.resumeTimer)
-                  toast.addEventListener('mouseleave', function timeOutAdmin(){
-                    setTimeout(function(){window.location.href = './pages/userAdim.html'; },1000);
-                  })
+                  toast.addEventListener('mouseleave', timeOutAdmin())
                 }
               })
               Toast.fire({
                 icon: 'success',
                 title: 'Verificando credenciales'
               })
-              
+                          
         break;
         case 'Usuario Cliente':
             const Toast1 = Swal.mixin({
@@ -54,9 +52,7 @@ function ingresar(){
                 didOpen: (toast1) => {
                   toast1.addEventListener('mouseenter', Swal.stopTimer)
                   toast1.addEventListener('mouseleave', Swal.resumeTimer)
-                  toast1.addEventListener('mouseleave',   function timeOutCliente(){
-                    setTimeout(function(){window.location.href = './pages/userCliente.html'; },1000);
-                  })                  
+                  toast1.addEventListener('mouseleave', timeOutCliente())                  
                 }
               })
               Toast1.fire({
