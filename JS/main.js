@@ -47,7 +47,7 @@ btnRegistrarse.onclick = () =>{
 window.addEventListener("resize", ajusteWidth);
 
 function ajusteWidth() {
-    if(window.innerWidth > 850){
+    if(window.innerWidth > 800){
         cajaLogin.style.display = "block";
         cajaRegistro.style.display = "block";
     }

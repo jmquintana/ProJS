@@ -247,8 +247,13 @@ main{
 	.formulario {
 		grid-template-columns: 1fr;
 	}
-
-	.formulario__grupo-terminos, 
+  .formularioRegistro{
+    height: auto;
+  }
+  .formularioLogin{
+    height: auto;
+  }
+	 
 	.formulario__mensaje,
 	.formulario__grupo-btn-enviar {
 		grid-column: 1;
