@@ -32,6 +32,7 @@ main{
 /* Login y Reg+istro */
 .cajaFondo{
   width: 100%;
+  height: 60vh;
   padding: 0.625rem 1.25rem;
   display: flex;
   justify-content: center;
@@ -80,8 +81,8 @@ main{
   width: 100%;
   max-width: 380px;
   position: relative;
-  top: -12rem;
-  left: 0.625rem;
+  top: -11.5rem;
+  left: 0.3125rem;
   transition: left 500ms cubic-bezier(0.175,0.885,0.320,1.275);
 }
 .contenedorLoginRegistro form{
@@ -95,9 +96,9 @@ main{
   border-bottom-left-radius: 3.125rem;
 }
 .contenedorLoginRegistro form h2{
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #7d83ff;
 }
 .contenedorLoginRegistro form input{
@@ -112,7 +113,7 @@ main{
 }
 .contenedorLoginRegistro form button{
   margin-top: 1rem;
-  padding: 0.625rem 2.5rem;
+  padding: 0.625rem 2rem;
   border-bottom-right-radius: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -130,12 +131,159 @@ main{
 .formularioLogin{
   opacity: 1;
   display: block;
+  height: 65vh;
 }
 .formularioRegistro{
   opacity: 1;
   display: none;
+  height: 88vh;
 }
 
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 2px solid #1affd5;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
+
+/* propiedades del pie de página */
+footer {
+  position: fixed;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: .8rem;
+  text-align: center;
+}
+/* Custom Sweet Alert */
+.Custom_Cancel {
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(0.625rem);
+  background-color: rgba(11, 11, 11, 0.4);
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 3.125rem;
+  border-top-left-radius: 3.125rem;
+  border-bottom-left-radius: 0.625rem;
+  color: white;
+}
 /* Full responsive design */
 @media screen and (max-width: 850px){
   main{
@@ -160,28 +308,4 @@ main{
   .contenedorLoginRegistro form{
     position: relative;
   }
-}
-/* propiedades del pie de página */
-footer {
-  position: fixed;
-  background-color: black;
-  color: white;
-  bottom: 0;
-  width: 100%;
-  height: 5%;
-  margin-top: 5%;
-  font-weight: bold;
-  font-size: .8rem;
-  text-align: center;
-}
-.Custom_Cancel {
-  display: flex;
-  justify-content: center;
-  backdrop-filter: blur(0.625rem);
-  background-color: rgba(11, 11, 11, 0.4);
-  border-top-right-radius: 0.625rem;
-  border-bottom-right-radius: 3.125rem;
-  border-top-left-radius: 3.125rem;
-  border-bottom-left-radius: 0.625rem;
-  color: white;
 }

@@ -22,6 +22,7 @@
   <script defer src="./JS/main.js"></script>
   <script defer src="./JS/registro.js" ></script>
   <script defer src="./JS/inicioSesion.js"></script>
+  <script defer src="./JS/formulario.js" ></script>
 
 </head>
 <body>
@@ -46,21 +47,57 @@
         <!-- Login -->
         <form action="" class="formularioLogin">
           <h2>Iniciar Sesión</h2>
-          <input type="email" placeholder="Correo electronico" name="" id="txtEmailIngresado">
-          <input type="password" placeholder="Contraseña" name="" id="txtClaveIngresada">
+          <input type="email" class="formulario__input" placeholder="Correo electronico" name="" id="txtEmailIngresado">
+          <input type="clave" class="formulario__input" placeholder="Contraseña" name="" id="txtClaveIngresada">
           <button id="btnIngresar">Ingresar</button>
         </form>
         <!-- Regístro -->
-        <form action="" class="formularioRegistro">
+        <form action="" class="formularioRegistro" id="formularioResgistro">
           <h2>Regístrarse</h2>
-          <input type="text" placeholder="Nombre Completo" name="" id="txtNombreCompleto">
-          <input type="email" placeholder="Correo electronico" name="" id="txtEmailUsuario">
-          <input type="password" placeholder="Ingrese una contraseña" name="" id="txtClaveUsuario">
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="txtNombreCompleto" placeholder="Nombre Completo">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+          </div>
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="txtEmailUsuario" placeholder="Correo electronico">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+          </div>
+    
+          <!-- Grupo: Contraseña -->
+          <div class="formulario__grupo" id="grupo__clave">
+            <div class="formulario__grupo-input">
+              <input type="clave" class="formulario__input" name="clave" id="txtClaveUsuario" placeholder="Ingrese una contraseña">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+          </div>
+          <!-- Grupo: Repetir Contraseña -->
+          <div class="formulario__grupo" id="grupo__clave2">
+            <div class="formulario__grupo-input">
+              <input type="clave" class="formulario__input" name="repetirClave" id="txtRepetirClaveUsuario" placeholder="Repetir contraseña">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+          </div>
           <label>Seleccionar su rol:</label>
           <select id="mySelect">
             <option value="-1">Seleccionar:</option>
           </select>
-          <button id="btnGuardar" >Guardar</button>
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn" id="btnGuardar">Guardar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Se ha registrado exitosamente!</p>
+          </div>
         </form>
       </div>
     </div>
