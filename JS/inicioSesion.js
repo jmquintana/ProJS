@@ -16,11 +16,12 @@ botonIngresar.onclick = (e) =>{
       Swal.fire({
         icon: 'error',
         iconColor:'red',
-        title: 'Ups...',
-        text: 'Usuario y/o contraseña incorrecto.',
-        confirmButtonText:'Intentalo nuevamente',
-        confirmButtonColor:'#007fff',
-        customClass: "Custom_Cancel",
+        text: 'Usuario y/o Contraseña inválido.',
+        buttonsStyling:false,
+        customClass:{
+          popup:'popup-class',
+          confirmButton: 'confirmButton-class',
+        }
       })
   }
 }
