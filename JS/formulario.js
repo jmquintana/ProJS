@@ -37,15 +37,15 @@ const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-duotone fa-check-double');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-exclamation');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-duotone fa-check-double');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-exclamation');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[campo] = false;
 	}
@@ -58,14 +58,14 @@ const validarrepetirpassword = () => {
 	if(inputPassword.value !== inputrepetirpassword.value){
 		document.getElementById(`grupo__repetirpassword`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__repetirpassword`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__repetirpassword i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__repetirpassword i`).classList.add('fa-circle-exclamation');
 		document.querySelector(`#grupo__repetirpassword i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__repetirpassword .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
 	} else {
 		document.getElementById(`grupo__repetirpassword`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__repetirpassword`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__repetirpassword i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__repetirpassword i`).classList.remove('fa-circle-exclamation');
 		document.querySelector(`#grupo__repetirpassword i`).classList.add('fa-check-circle');
 		document.querySelector(`#grupo__repetirpassword .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos['password'] = true;
