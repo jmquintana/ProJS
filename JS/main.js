@@ -77,12 +77,12 @@ function obtenerUsuarios(){
     return listaUsuarios;
 }
 
-function validarCredenciales(pEmail, pClave){ 
+function validarCredenciales(pCorreo, ppassword){ 
     let ListadoSubscriptores = obtenerUsuarios();
     let bAcceso = false;
 
     for (var i=0; i < ListadoSubscriptores.length; i++ ){
-        if(pEmail == ListadoSubscriptores[i].email && pClave == ListadoSubscriptores[i].clave){
+        if(pCorreo == ListadoSubscriptores[i].correo && ppassword == ListadoSubscriptores[i].password){
             bAcceso = true;
             sessionStorage.setItem('usuarioActivo', ListadoSubscriptores[i].nombre);
             sessionStorage.setItem('rolUsuarioActivo', ListadoSubscriptores[i].rol);

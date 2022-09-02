@@ -1,13 +1,13 @@
 botonIngresar.onclick = (e) =>{
     e.preventDefault();
-    let sEmailIngresado = '';
-    let sClaveIngresada = '';
+    let sCorreoIngresado = '';
+    let spasswordIngresada = '';
     let bAcceso = false;
 
-    sEmailIngresado = document.querySelector('#txtEmailIngresado').value;
-    sClaveIngresada = document.querySelector('#txtClaveIngresada').value;
+    sCorreoIngresado = document.querySelector('#txtCorreoIngresado').value;
+    spasswordIngresada = document.querySelector('#txtpasswordIngresada').value;
 
-    bAcceso = validarCredenciales(sEmailIngresado, sClaveIngresada);
+    bAcceso = validarCredenciales(sCorreoIngresado, spasswordIngresada);
 
     if( bAcceso == true){
         ingresar ();

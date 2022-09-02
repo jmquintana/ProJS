@@ -32,7 +32,7 @@ main{
 /* Login y Reg+istro */
 .cajaFondo{
   width: 100%;
-  height: 60vh;
+  height: auto;
   padding: 0.625rem 1.25rem;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@ main{
   width: 100%;
   max-width: 380px;
   position: relative;
-  top: -11.5rem;
+  top:-12rem;
   left: 0.3125rem;
   transition: left 500ms cubic-bezier(0.175,0.885,0.320,1.275);
 }
@@ -131,12 +131,12 @@ main{
 .formularioLogin{
   opacity: 1;
   display: block;
-  height: 65vh;
+  height: auto;
 }
 .formularioRegistro{
   opacity: 1;
   display: none;
-  height: 88vh;
+  height: auto;
 }
 
 .formulario__grupo-input {
@@ -155,7 +155,29 @@ main{
 }
 
 .formulario__input:focus {
-	border: 2px solid #1affd5;
+	border: 2px solid #007fff;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+.mySelect{
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 0.4rem;
+  border: none;
+  background: #F2F2F2;
+  font-size: 1rem;
+  color: #666666;
+  outline: none;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	transition: .3s ease all;
+}
+
+.mySelect:focus{
+  border: 2px solid #007fff;
 	outline: none;
 	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
@@ -223,9 +245,30 @@ main{
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
+
+#formulario__validacion-estado{
+  color: #1ed12d;
+	opacity: 1;
+  margin-bottom: 1rem;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 2px 3px rgba(0 0 0/0.15);
+  width: 30%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
 	opacity: 1;
+  margin-bottom: 1rem;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 2px 3px rgba(0 0 0/0.15);
+  width: 30%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .formulario__grupo-incorrecto .formulario__label {
@@ -235,6 +278,14 @@ main{
 .formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #bb2929;
 	opacity: 1;
+  margin-bottom: 1rem;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 2px 3px rgba(0 0 0/0.15);
+  width: 30%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .formulario__grupo-incorrecto .formulario__input {
