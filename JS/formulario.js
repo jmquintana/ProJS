@@ -16,8 +16,8 @@ const validarFormulario = (e) =>{
             if(expresiones.nombre.test(e.target.value)){
                 document.getElementById('grupo__nombre').classList.remove('formulario__grupo-incorrecto');
                 document.getElementById('grupo__nombre').classList.add('formulario__grupo-correcto');
-                document.querySelector('#grupo__nombre i').classList.add('f560');
-                document.querySelector('#grupo__nombre i').classList.remove('f06a');
+                document.querySelector('#grupo__nombre i').classList.add('');
+                document.querySelector('#grupo__nombre i').classList.remove('');
             }else{
                 document.getElementById('grupo__nombre').classList.add('formulario__grupo-incorrecto');
             }

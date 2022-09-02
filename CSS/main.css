@@ -245,19 +245,6 @@ main{
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
-
-#formulario__validacion-estado{
-  color: #1ed12d;
-	opacity: 1;
-  margin-bottom: 1rem;
-  padding: 0.25em 0.6em;
-  border-radius: 0.3rem;
-  text-align: center;
-  box-shadow: 0 2px 3px rgba(0 0 0/0.15);
-  width: 30%;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
 	opacity: 1;
