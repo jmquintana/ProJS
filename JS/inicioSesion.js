@@ -20,7 +20,7 @@ botonIngresar.onclick = (e) =>{
         text: 'Usuario y/o contraseña incorrecto.',
         confirmButtonText:'Intentalo nuevamente',
         confirmButtonColor:'#007fff',
-        customClass: "Custom_Cancel"
+        customClass: "Custom_Cancel",
       })
   }
 }
