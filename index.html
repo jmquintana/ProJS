@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Login</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- CDN Font-aweome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" ></script>
   <!-- Css -->
   <link rel="stylesheet" href="./CSS/main.css">
 
@@ -60,7 +61,7 @@
           <div class="formulario__grupo" id="grupo__nombre">
             <div class="formulario__grupo-input">
               <input type="text" class="formulario__input" name="nombre" id="txtNombreCompleto" placeholder="Nombre Completo">
-              <i class="formulario__validacion-estado"></i>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
           </div>
@@ -79,7 +80,7 @@
               <input type="password" class="formulario__input" name="password" id="txtpasswordUsuario" placeholder="Ingrese una contraseña">
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">La contraseña tiene que ser mayor a 6 y menor a 15 dígitos. Contener al menos una mayúscula y un carácter especial.</p>
+            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
           </div>
           <!-- Grupo: Repetir Contraseña -->
           <div class="formulario__grupo" id="grupo__password2">
