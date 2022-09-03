@@ -59,7 +59,8 @@
           <div class="formulario__grupo" id="grupo__nombre">
             <div class="formulario__grupo-input">
               <input type="text" class="formulario__input" name="nombre" id="txtNombreCompleto" placeholder="Nombre Completo">
-              <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+              <i class="formulario__validacion-estado fa-solid fa-circle-exclamation" aria-hidden="true">
+              </i>
             </div>
             <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
           </div>
@@ -75,7 +76,7 @@
           <!-- Grupo: Contraseña -->
           <div class="formulario__grupo" id="grupo__password">
             <div class="formulario__grupo-input">
-              <input type="password" class="formulario__input" name="password" id="txtpasswordUsuario" placeholder="Ingrese una contraseña">
+              <input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese una contraseña">
               <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
             </div>
             <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
@@ -83,12 +84,12 @@
           <!-- Grupo: Repetir Contraseña -->
           <div class="formulario__grupo" id="grupo__password2">
             <div class="formulario__grupo-input">
-              <input type="password" class="formulario__input" name="repetirpassword" id="txtRepetirpasswordUsuario" placeholder="Repetir contraseña">
+              <input type="password" class="formulario__input" name="password2" id="password2" placeholder="Repetir contraseña">
               <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
             </div>
             <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
           </div>
-          <select class="mySelect" id="mySelect">
+          <select class="mySelect" id="mySelect" name="mySelect">
             <option value="-1">Indique su rol:</option>
           </select>
           <div class="formulario__mensaje" id="formulario__mensaje">

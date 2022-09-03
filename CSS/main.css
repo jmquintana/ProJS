@@ -233,7 +233,7 @@ main{
 .formulario__grupo-correcto .formulario__validacion-estado{
 	color: #1ed12d;
 	opacity: 1;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
   padding: 0.25em;
   border-radius: 0.3rem;
   text-align: center;
@@ -247,7 +247,7 @@ main{
 .formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #bb2929;
 	opacity: 1;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   padding: 0.25em;
   border-radius: 0.3rem;
   text-align: center;

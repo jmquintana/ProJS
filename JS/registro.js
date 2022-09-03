@@ -14,7 +14,7 @@ Verificar()
 botonGuardar.onclick = () =>{
     let nombreIngresado = document.getElementById('txtNombreCompleto').value;
     let correoUsuario = document.getElementById('txtCorreoUsuario').value;
-    let passwordUsuario = document.getElementById('txtpasswordUsuario').value; 
+    let passwordUsuario = document.getElementById('password').value; 
     let rolUsuario = document.getElementById('mySelect').value;
 
     let objUsuario = {nombre: nombreIngresado, correo: correoUsuario, password: passwordUsuario, rol: rolUsuario}
